@@ -74,9 +74,7 @@ RUN apt-get remove python-urllib3 \
 
 RUN wget -qO- https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
-RUN npm install -g bower
-RUN npm install -g less
-RUN npm install -g coffeescript
+RUN npm install -g bower less coffeescript
 
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*[~]$
 
