@@ -54,7 +54,6 @@ RUN apt-get update \
         python-imaging \
         python-pip \
         python-setuptools \
-        python-virtualenv \
         python-zmq \
         supervisor \
         xfonts-75dpi \
