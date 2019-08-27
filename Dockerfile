@@ -67,16 +67,16 @@ RUN apt-get update \
 RUN sh /geolibs.sh
 RUN sh /imagemagick.sh
 
-RUN echo "deb http://security.ubuntu.com/ubuntu xenial-security main" > /etc/apt/sources.list
-RUN apt-get install -y libpng12-0
-
-RUN sh /wkhtmltox.sh
-
-RUN rm -rf /var/lib/apt/lists/*
+RUN rm -rf /var/lib/apt/lists/* /etc/apt/sources.list.d/*
 
 RUN wget -qO- https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update && apt-get install -y nodejs
 RUN npm install -g bower less coffeescript
+
+RUN echo "deb http://security.ubuntu.com/ubuntu xenial-security main" > /etc/apt/sources.list
+RUN apt-get update && apt-get install -y libpng12-0
+
+RUN sh /wkhtmltox.sh
 
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*[~]$
 
