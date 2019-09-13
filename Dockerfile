@@ -22,6 +22,7 @@ RUN apt-get update \
         fontconfig \
         g++ \
         gcc \
+        gettext \
         git \
         lib32ncurses5-dev \
         libc-dev \
